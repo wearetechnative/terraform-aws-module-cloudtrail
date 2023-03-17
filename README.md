@@ -12,6 +12,8 @@ Run `pre-commit install` to install any guardrails implemented using pre-commit.
 
 See [pre-commit installation](https://pre-commit.com/#install) on how to install pre-commit.
 
+BEWARE: Some data level logging is enabled as well by default.
+
 ## Usage
 
 To use this module see below. It only requires a name and KMS key reference.
@@ -55,6 +57,7 @@ module "cloudtrail" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_enable_organization_trail"></a> [enable\_organization\_trail](#input\_enable\_organization\_trail) | Use organization trail, requires management account. Disables object level events to prevent cost increase. | `bool` | `false` | no |
 | <a name="input_kms_key_arn"></a> [kms\_key\_arn](#input\_kms\_key\_arn) | KMS key to use for encrypting CloudTrail S3 logs. | `string` | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | Prefix name for DynamoDB. Must be unique within the region. | `string` | n/a | yes |
 
