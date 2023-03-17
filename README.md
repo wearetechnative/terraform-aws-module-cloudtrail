@@ -22,10 +22,11 @@ Make sure you also set this up on us-east-1 to capture any global resource activ
 
 ```hcl
 module "cloudtrail" {
-  source = "./modules/cloudtrail"
+  source = "git@github.com:TechNative-B-V/terraform-aws-module-cloudtrail.git?ref=bcf75a7fa6f7b891993936290059efb7d16a7490"
 
   name = "debug"
   kms_key_arn = module.athena_kms.kms_key_arn
+  enable_organization_trail = false
 }
 ```
 
