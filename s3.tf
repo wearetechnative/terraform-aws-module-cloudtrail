@@ -1,5 +1,5 @@
 module "this" {
-  source = "git@github.com:TechNative-B-V/terraform-aws-module-s3.git/?ref=d23eda80e3de956f30f176fc1f2e0cdfa3ac3ae8"
+  source = "git@github.com:wearetechnative/terraform-aws-s3.git?ref=2df300694acecd8ca62330a039b4a25eae20b07d"
 
   name = "cloudtrail_${var.name}"
   kms_key_arn = var.kms_key_arn
