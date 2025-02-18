@@ -1,10 +1,12 @@
 module "this" {
-  source = "github.com/wearetechnative/terraform-aws-s3.git?ref=945d79d5d12cbc2e281afae53c74367a3c6bfd6e"
+
+  source = "git@github.com:wearetechnative/terraform-aws-s3.git?ref=ca91a44b390d18e1998b3e5446b42e1079a11d5d"
 
   name = "cloudtrail_${var.name}"
   kms_key_arn = var.kms_key_arn
   bucket_policy_addition = jsondecode(data.aws_iam_policy_document.cloudtrail_s3_bucket_policy.json)
   disable_encryption_enforcement = true # required otherwise CloudTrail wont work
+  lifecycle_configuration = var.lifecycle_rules_configuration
 }
 
 data "aws_arn" "s3" {
