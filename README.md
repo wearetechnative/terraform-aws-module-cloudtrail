@@ -1,4 +1,4 @@
-# Terraform AWS [cloudtrail]
+# Terraform AWS [cloudtrail] ![](https://img.shields.io/github/actions/workflow/status/wearetechnative/terraform-aws-module-cloudtrail/tflint.yaml?branch=main&style=plastic)
 
 This module implements an extended CloudTrail setup to debug issues with customers.
 
